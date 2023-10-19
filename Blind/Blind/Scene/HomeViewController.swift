@@ -14,22 +14,20 @@ import RxSwift
 private enum Tab: String, CaseIterable {
     case home = "홈"
     case trending = "인기"
-    
-    var view: UIView {
-        switch self {
-        case .home: return HomeView()
-        case .trending: return TrendView()
-        }
-    }
 }
 
 final class HomeViewController: BaseViewController<HomeViewModel> {
     
-    private let topTabBar = UITabBar()
+    private lazy var topTabBar = UITabBar().then {
+        $0.delegate = self
+        $0.barTintColor = .white
+    }
     
     private let scrollView = UIScrollView().then {
         $0.showsHorizontalScrollIndicator = false
     }
+    
+    private var mainView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +40,8 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
         super.layout()
         
         container.flex.define {
-            $0.addItem(topTabBar).width(UIScreen.main.bounds.width)
+            $0.addItem(topTabBar).marginTop(10).width(UIScreen.main.bounds.width)
+            $0.addItem(mainView).width(UIScreen.main.bounds.width).height(300)
         }
     }
     
@@ -51,13 +50,27 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
     }
     
     private func settingTabBar() {
-        var temp: [UIView] = []
+        var barItems: [UITabBarItem] = []
         Tab.allCases.forEach { tab in
-            let vc = tab.view
-//            vc.tabBarItem = UITabBarItem(title: tab.rawValue,
-//                                         image: nil,
-//                                         selectedImage: nil)
-            temp.append(vc)
+            let barItem = UITabBarItem(title: tab.rawValue,
+                                       image: nil,
+                                       selectedImage: nil)
+            barItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -16)
+            barItems.append(barItem)
         }
+        topTabBar.setItems(barItems, animated: false)
+        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)]
+        UITabBarItem.appearance().setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
+    }
+}
+
+extension HomeViewController: UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.title == "홈" {
+            mainView = HomeView()
+        } else {
+            mainView = TrendView()
+        }
+        mainView.flex.markDirty()
     }
 }
