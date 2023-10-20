@@ -11,9 +11,7 @@ import PinLayout
 import Then
 
 final class HomeView: UIView {
-    private let container = UIView().then {
-        $0.backgroundColor = .blue
-    }
+    private let container = UIView()
     
     private let textLabel = UILabel().then {
         $0.font = UIFont.boldSystemFont(ofSize: 20)
@@ -37,7 +35,7 @@ final class HomeView: UIView {
     }
     
     private func layout() {
-        self.flex.addItem(container).define {
+        self.flex.addItem(container).alignItems(.center).justifyContent(.center).width(100%).height(100%).define {
             $0.addItem(textLabel)
         }
     }
