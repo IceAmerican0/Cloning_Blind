@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C02FC932AE62F99009C7C84 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 5C02FC922AE62F99009C7C84 /* RxGesture */; };
+		5C02FC952AE630BF009C7C84 /* TopViewPagerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C02FC942AE630BF009C7C84 /* TopViewPagerCollectionViewCell.swift */; };
+		5C02FC982AE6332B009C7C84 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C02FC972AE6332B009C7C84 /* UICollectionView+.swift */; };
+		5C02FC9A2AE63335009C7C84 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C02FC992AE63335009C7C84 /* UICollectionViewCell+.swift */; };
 		5CA7068A2ADF75FB002BA772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706892ADF75FB002BA772 /* AppDelegate.swift */; };
 		5CA7068C2ADF75FB002BA772 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA7068B2ADF75FB002BA772 /* SceneDelegate.swift */; };
 		5CA706A12ADF75FC002BA772 /* BlindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706A02ADF75FC002BA772 /* BlindTests.swift */; };
@@ -26,8 +30,8 @@
 		5CA706DF2ADFAC99002BA772 /* BaseDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706DE2ADFAC99002BA772 /* BaseDisposeBag.swift */; };
 		5CA706E22ADFACE9002BA772 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706E02ADFACE9002BA772 /* EmptyViewController.swift */; };
 		5CA706E32ADFACE9002BA772 /* EmptyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706E12ADFACE9002BA772 /* EmptyViewModel.swift */; };
-		5CA706E52ADFBDC1002BA772 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706E42ADFBDC1002BA772 /* HomeView.swift */; };
-		5CA706E72ADFD0B0002BA772 /* TrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706E62ADFD0AF002BA772 /* TrendView.swift */; };
+		5CA706E52ADFBDC1002BA772 /* ViewPagerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706E42ADFBDC1002BA772 /* ViewPagerHomeViewController.swift */; };
+		5CA706E72ADFD0B0002BA772 /* ViewPagerTrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA706E62ADFD0AF002BA772 /* ViewPagerTrendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C02FC942AE630BF009C7C84 /* TopViewPagerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewPagerCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C02FC972AE6332B009C7C84 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		5C02FC992AE63335009C7C84 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		5CA706862ADF75FB002BA772 /* Blind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA706892ADF75FB002BA772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CA7068B2ADF75FB002BA772 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +72,8 @@
 		5CA706DE2ADFAC99002BA772 /* BaseDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDisposeBag.swift; sourceTree = "<group>"; };
 		5CA706E02ADFACE9002BA772 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		5CA706E12ADFACE9002BA772 /* EmptyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewModel.swift; sourceTree = "<group>"; };
-		5CA706E42ADFBDC1002BA772 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		5CA706E62ADFD0AF002BA772 /* TrendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendView.swift; sourceTree = "<group>"; };
+		5CA706E42ADFBDC1002BA772 /* ViewPagerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPagerHomeViewController.swift; sourceTree = "<group>"; };
+		5CA706E62ADFD0AF002BA772 /* ViewPagerTrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPagerTrendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +87,7 @@
 				5CA706C22ADF90CE002BA772 /* PinLayout in Frameworks */,
 				5CA706D42ADFA879002BA772 /* RxCocoa in Frameworks */,
 				5CA706BF2ADF90C4002BA772 /* Then in Frameworks */,
+				5C02FC932AE62F99009C7C84 /* RxGesture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C02FC962AE63320009C7C84 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5C02FC972AE6332B009C7C84 /* UICollectionView+.swift */,
+				5C02FC992AE63335009C7C84 /* UICollectionViewCell+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5CA7067D2ADF75FB002BA772 = {
 			isa = PBXGroup;
 			children = (
@@ -155,8 +172,9 @@
 				5CA706BB2ADF903B002BA772 /* HomeTabBarController.swift */,
 				5CA706CA2ADFA825002BA772 /* HomeViewController.swift */,
 				5CA706CB2ADFA825002BA772 /* HomeViewModel.swift */,
-				5CA706E42ADFBDC1002BA772 /* HomeView.swift */,
-				5CA706E62ADFD0AF002BA772 /* TrendView.swift */,
+				5CA706E42ADFBDC1002BA772 /* ViewPagerHomeViewController.swift */,
+				5CA706E62ADFD0AF002BA772 /* ViewPagerTrendViewController.swift */,
+				5C02FC942AE630BF009C7C84 /* TopViewPagerCollectionViewCell.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -164,6 +182,7 @@
 		5CA706BA2ADF761A002BA772 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				5C02FC962AE63320009C7C84 /* Extension */,
 				5CA706D92ADFAB95002BA772 /* Base */,
 			);
 			path = Util;
@@ -204,6 +223,7 @@
 				5CA706D32ADFA879002BA772 /* RxCocoa */,
 				5CA706D52ADFA879002BA772 /* RxRelay */,
 				5CA706D72ADFA879002BA772 /* RxSwift */,
+				5C02FC922AE62F99009C7C84 /* RxGesture */,
 			);
 			productName = Blind;
 			productReference = 5CA706862ADF75FB002BA772 /* Blind.app */;
@@ -282,6 +302,7 @@
 				5CA706C02ADF90CE002BA772 /* XCRemoteSwiftPackageReference "PinLayout" */,
 				5CA706C32ADF90DA002BA772 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				5CA706D22ADFA879002BA772 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				5C02FC912AE62F99009C7C84 /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = 5CA706872ADF75FB002BA772 /* Products */;
 			projectDirPath = "";
@@ -326,15 +347,18 @@
 				5CA7068A2ADF75FB002BA772 /* AppDelegate.swift in Sources */,
 				5CA7068C2ADF75FB002BA772 /* SceneDelegate.swift in Sources */,
 				5CA706E32ADFACE9002BA772 /* EmptyViewModel.swift in Sources */,
+				5C02FC9A2AE63335009C7C84 /* UICollectionViewCell+.swift in Sources */,
 				5CA706BC2ADF903B002BA772 /* HomeTabBarController.swift in Sources */,
 				5CA706DF2ADFAC99002BA772 /* BaseDisposeBag.swift in Sources */,
-				5CA706E52ADFBDC1002BA772 /* HomeView.swift in Sources */,
+				5CA706E52ADFBDC1002BA772 /* ViewPagerHomeViewController.swift in Sources */,
 				5CA706DD2ADFABA5002BA772 /* BaseViewModel.swift in Sources */,
 				5CA706CD2ADFA825002BA772 /* HomeViewModel.swift in Sources */,
 				5CA706E22ADFACE9002BA772 /* EmptyViewController.swift in Sources */,
 				5CA706CC2ADFA825002BA772 /* HomeViewController.swift in Sources */,
-				5CA706E72ADFD0B0002BA772 /* TrendView.swift in Sources */,
+				5CA706E72ADFD0B0002BA772 /* ViewPagerTrendViewController.swift in Sources */,
 				5CA706DB2ADFAB9F002BA772 /* BaseViewController.swift in Sources */,
+				5C02FC982AE6332B009C7C84 /* UICollectionView+.swift in Sources */,
+				5C02FC952AE630BF009C7C84 /* TopViewPagerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +688,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C02FC912AE62F99009C7C84 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		5CA706BD2ADF90C4002BA772 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -699,6 +731,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5C02FC922AE62F99009C7C84 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C02FC912AE62F99009C7C84 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
 		5CA706BE2ADF90C4002BA772 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5CA706BD2ADF90C4002BA772 /* XCRemoteSwiftPackageReference "Then" */;

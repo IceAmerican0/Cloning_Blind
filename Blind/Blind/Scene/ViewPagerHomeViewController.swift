@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  ViewPagerHomeViewController.swift
 //  Blind
 //
 //  Created by Khai on 2023/10/18.
@@ -10,7 +10,7 @@ import FlexLayout
 import PinLayout
 import Then
 
-final class HomeView: UIView {
+final class ViewPagerHomeViewController: UIViewController {
     private let container = UIView()
     
     private let textLabel = UILabel().then {
@@ -19,7 +19,7 @@ final class HomeView: UIView {
     }
     
     public init() {
-        super.init(frame: .zero)
+        super.init(nibName: nil, bundle: nil)
         layout()
     }
     
@@ -27,15 +27,15 @@ final class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         container.pin.all()
         container.flex.layout()
+        view.addSubview(container)
     }
     
     private func layout() {
-        self.flex.addItem(container).alignItems(.center).justifyContent(.center).width(100%).height(100%).define {
+        container.flex.alignItems(.center).justifyContent(.center).define {
             $0.addItem(textLabel)
         }
     }

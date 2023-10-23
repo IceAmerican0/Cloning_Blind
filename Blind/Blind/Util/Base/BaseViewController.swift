@@ -44,14 +44,14 @@ public class BaseViewController<ViewModel>: UIViewController, BaseDisposeBag whe
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.isNavigationBarHidden = true
-        
         view.backgroundColor = .white
         view.addSubview(container)
     }
     
-    func attribute() { }
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     
     func layout() { }
     

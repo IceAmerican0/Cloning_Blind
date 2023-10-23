@@ -20,7 +20,7 @@ private enum Tab: String, CaseIterable {
     
     var viewController: UIViewController {
         switch self {
-        case .home: return HomeViewController(HomeViewModel())
+        case .home: return HomeViewController(EmptyViewModel())
         default: return EmptyViewController()
         }
     }
